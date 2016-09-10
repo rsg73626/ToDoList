@@ -1,0 +1,71 @@
+﻿<!--   
+2     +-----------------------------------------------------------+   
+3     |               Escola SENAI de Informática                 | 
+4     |                  Endeavor & J.P. Morgan                   | 
+5     |    Curso de Desenvolvedor Multiplataforma Web & Mobile    | 
+6     |               Desafio JavaScript TODO List                | 
+7     |           Aluno:  Victor Rubens da Silva Santos           | 
+8     |                   Equipe: Trade Force                     |  
+9     +-----------------------------------------------------------+    
+10 --> 
+11 
+ 
+12 <!DOCTYPE html> 
+13 <html lang="pt-br"> 
+14   <head> 
+15       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+16       <link rel="stylesheet" type="text/css" href="assets/main.css"> 
+17        
+18       <script type="text/javascript" src="tarefas.json"></script> 
+19       <script type="text/javascript" src="script.js"></script> 
+20       <title>Desafio FrontEnd - TodoList</title> 
+21   </head> 
+22   <body onload="readJSON();"> 
+23     <!-- APP --> 
+24   	<div id="app"> 
+25       <!-- NAV --> 
+26   		<nav> 
+27   			<ul class="tabs"> 
+28   				<li class="active" onclick="clickNaoFeitas()" id="tabNaoFeitas"><a  href="#" data-tabindex="0" title="NÃO FEITAS">NÃO FEITAS</a></li> 
+29   				<li onclick="clickFeitas()" id="tabFeitas"><a href="#"  data-tabindex="1" title="FEITAS">FEITAS</a></li> 
+30   			</ul> 
+31   		</nav> 
+32       <!-- END NAV --> 
+33 
+ 
+34       <!-- CONTEUDOTAB --> 
+35   		<div id="conteudoTab"> 
+36         <!-- NAOFEITAS --> 
+37   			<section id="naoFeitas" class="active"> 
+38   				<ul id="ListNaoFeitas"> 
+39              
+40          
+41           </ul> 
+42   				<div id="formAdicionarTarefa" > 
+43   					<textarea name="descricao" id="txtDescricao" onkeyup="contaCaracter()"  placeholder="Insira uma tarefa"></textarea> 
+44   					<button onclick="addTask()" >Adicionar</button> 
+45   					<span id="erro"></span> 
+46   					<span id="contador">140</span> 
+47   				</div> 
+48   			</section> 
+49         <!-- END NAOFEITAS --> 
+50 
+ 
+51         <!-- FEITAS --> 
+52   			<section id="feitas"> 
+53   				<ul id="ListFeitas"> 
+54             
+55           </ul> 
+56   			</section> 
+57         <!-- END FEITAS --> 
+58   		</div> 
+59       <!-- END CONTEUDOTAB --> 
+60 
+ 
+61   	</div> 
+62     <!-- END APP --> 
+63 
+ 
+64      
+65   </body> 
+66 </html> 
